@@ -10,7 +10,7 @@ const PopupForm = ({ isOpen, hidePopup }) => {
   const [refereePhone, setRefereePhone] = useState("");
   const [programOfInterest, setProgramOfInterest] = useState("");
   const [comments, setComments] = useState("");
-  const [error, setError] = useState(null); // State to hold error messages
+  const [error, setError] = useState(null); 
 
   const programs = [
     "PRODUCT MANAGEMENT",
@@ -39,7 +39,7 @@ const PopupForm = ({ isOpen, hidePopup }) => {
     };
 
     try {
-      const response = await fetch("https://accredian-frontend-delta.vercel.app/referrals", {
+      const response = await fetch("https://accredian-backend.herokuapp.com/referrals", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const PopupForm = ({ isOpen, hidePopup }) => {
       alert("Referral submitted successfully!");
       console.log("Success:", data);
 
-      // Clear the form fields
+     
       setReferrerName("");
       setReferrerEmail("");
       setReferrerPhone("");
@@ -74,7 +74,7 @@ const PopupForm = ({ isOpen, hidePopup }) => {
   };
 
   const closePopup = () => {
-    // Clear the form fields and error state
+   
     setReferrerName("");
     setReferrerEmail("");
     setReferrerPhone("");
