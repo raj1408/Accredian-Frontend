@@ -39,7 +39,7 @@ const PopupForm = ({ isOpen, hidePopup }) => {
     };
 
     try {
-      const response = await fetch("https://accredian-backend.herokuapp.com/referrals", {
+      const response = await fetch("https://accredian-backend-epa6.onrender.com/referrals", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
